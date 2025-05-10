@@ -21,15 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   escribe();
 
-  // Creación de pétalos
-  setInterval(creaPetalo, 300);
-  function creaPetalo() {
+  // Pétalos
+  setInterval(() => {
     const petalo = document.createElement('div');
     petalo.className = 'petal';
     petalo.style.left = Math.random() * window.innerWidth + 'px';
-    const dur = Math.random() * 5 + 5;
-    petalo.style.animationDuration = `${dur}s`;
+    petalo.style.animationDuration = `${Math.random() * 5 + 5}s`;
     document.body.appendChild(petalo);
-    setTimeout(() => petalo.remove(), dur * 1000);
-  }
+    setTimeout(() => petalo.remove(), (parseFloat(petalo.style.animationDuration) * 1000));
+  }, 300);
 });
