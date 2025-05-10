@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mensajeEl = document.getElementById('message');
-  const contenedor = document.querySelector('.message-wrapper');
-
   const texto = `Mamá querida, cada día agradezco tu voz que ilumina mis mañanas y tu abrazo que calma mis miedos. Aunque a veces me cueste llamarte y mis palabras no sean suficientes, siento tu apoyo incondicional en cada paso que doy. Eres esa mujer valiente que nunca se rinde, ejemplo de fortaleza y ternura al mismo tiempo. 
   
   Gracias por cada sacrificio que aveces no sé reconocer y por enseñarme con tu ejemplo a creer en mí mismo. Hoy celebro tu vida, tus consejos llenos de sabiduría y tus risas que llenan la casa de alegría. 
@@ -16,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const char = texto.charAt(i);
       mensajeEl.innerHTML += (char === '\n') ? '<br>' : char;
       i++;
-      // Auto-scroll al fondo
-      contenedor.scrollTop = contenedor.scrollHeight;
+      // Auto-scroll de toda la página
+      window.scrollTo(0, document.body.scrollHeight);
       setTimeout(escribe, 45);
     }
   }

@@ -8,45 +8,32 @@
 body {
   background: linear-gradient(to bottom, #ffe6f2, #fff5f7);
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden; /* para ocultar scroll de body y pétalos fuera de vista */
   color: #333;
-  height: 100vh;
+  overflow-x: hidden; /* permite scroll vertical normal */
 }
 
 .container {
-  position: relative;
-  z-index: 2;
   width: 90%;
   max-width: 600px;
-  height: 75vh;              /* espacio fijo para scroll interno */
-  margin: 10vh auto;
+  margin: 12vh auto;
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 
 h1 {
-  flex: 0 0 auto;
   font-family: 'Sacramento', cursive;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #D6336C;
-}
-
-.message-wrapper {
-  flex: 1 1 auto;
-  overflow-y: auto;        /* habilita scroll interno */
-  text-align: justify;     /* justificado */
-  padding-right: 0.5rem;   /* espacio para scrollbar */
 }
 
 #message {
   font-size: 1.1rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* Pétalos animados */
